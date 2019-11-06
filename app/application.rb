@@ -20,7 +20,7 @@ class Application
       item = req.params["item"]
       if @@cart.include?(item) == false
         @@cart << item
-        resp.write "added Figs"
+        resp.write "added #{item}"
       elsif @@items.include?(item) == false
         resp.write "We don't have that item"
       else
