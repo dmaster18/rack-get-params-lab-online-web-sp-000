@@ -17,7 +17,7 @@ class Application
       resp.write handle_search(search_term)
     
     elsif req.path.match(/add/)
-      item = req.params["q"]
+      item = req.params["item"]
       if @@cart.include?(item) == false
         @@cart << item
         resp.write "added Figs"
